@@ -1,0 +1,4 @@
+﻿  Main.cpp
+c:\users\emil\source\repos\dicegame\dicegame\main.cpp(11): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\emil\source\repos\dicegame\dicegame\main.cpp(234): warning C4715: 'AskQuestion': not all control paths return a value
+  DiceGame.vcxproj -> C:\Users\Emil\source\repos\DiceGame\Debug\DiceGame.exe
