@@ -10,9 +10,7 @@ int TakeWithdraw(int account, int low);
 int main() {
 	srand(time(0));
 	int const lowBet = 100, medBet = 300, highBet = 500, maxAmount = 5000;
-	int bankAccount = 10000, gameAccount = 0;
-	int totalWinnings = 0;
-	int gamesCounter = 0;
+	int gameAccount = 0, totalWinnings = 0, gamesCounter = 0;
 	bool wantToStartGame = false;
 	bool wantToPlayAgain = false;
 	
