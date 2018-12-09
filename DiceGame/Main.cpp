@@ -11,11 +11,10 @@ int main() {
 	srand(time(0));
 	int const lowBet = 100, medBet = 300, highBet = 500, maxAmount = 5000;
 	int gameAccount = 0, totalWinnings = 0, gamesCounter = 0;
-	bool wantToStartGame = false;
 	bool wantToPlayAgain = false;
 	
 	cout << "Hello and welcome to DiceThrower!\n" << endl;
-	wantToStartGame = AskQuestion("Would you like to start the game? Reply with the corresponding number below.");
+	bool wantToStartGame = AskQuestion("Would you like to start the game? Reply with the corresponding number below.");
 
 	if (wantToStartGame) {
 		cout << "I am glad you wanted to play against me, lets get started!\n" << endl;
@@ -81,9 +80,7 @@ int main() {
 
 			cout << endl << "Alright! Lets get started!" << endl;
 
-			cout << "Press ENTER on your keyboard to continue!" << endl;
-
-			// score[0] = PLAYER <> score[1] = PC
+			// score[0] = PLAYER | score[1] = PC
 			int score[2] = { 0, 0 };
 			int plyHighest = 0, pcHighest = 0;
 			int roundCounter = 0;
@@ -115,7 +112,7 @@ int main() {
 				// Determine winner of round
 
 				if (plyHighest == pcHighest) {
-					cout << "You both scored the same, we will play another round!" << endl;
+					cout << "You both rolled the same highest dice, we will play another round to determine the winner!" << endl;
 				}
 				else if (plyHighest > pcHighest)
 				{
@@ -185,7 +182,7 @@ int TakeWithdraw(int account, int low) {
 	int moneyWithdrawable = account - low;
 	int amount;
 
-	cout << "You can withdraw anything between anything between 0-" << moneyWithdrawable << endl;
+	cout << "You can withdraw anything between 0-" << moneyWithdrawable << endl;
 	cout << "How much would you like to withdraw?" << endl;
 
 	do {
